@@ -10,6 +10,7 @@ interface Props {
     age?: number | null
     employment?: string
     dependents?: number | null
+    profilePreset?: string
   }
 }
 
@@ -17,6 +18,7 @@ export default function ClientProfileForm({ onNext, formId, defaultValues }: Pro
   const [age, setAge] = useState("")
   const [employment, setEmployment] = useState("")
   const [dependents, setDependents] = useState("")
+  const [profilePreset, setProfilePreset] = useState("")
 
   // load defaults when coming back
   useEffect(() => {
@@ -24,8 +26,43 @@ export default function ClientProfileForm({ onNext, formId, defaultValues }: Pro
       setAge(defaultValues.age?.toString() ?? "")
       setEmployment(defaultValues.employment ?? "")
       setDependents(defaultValues.dependents?.toString() ?? "")
+      setProfilePreset(defaultValues.profilePreset ?? "")
     }
   }, [defaultValues])
+
+  // handle preset selection (example logic – adjust numbers as you like)
+  const handlePresetChange = (value: string) => {
+    setProfilePreset(value)
+    switch (value) {
+      case "young-car":
+        setAge("25")
+        setEmployment("salaried")
+        setDependents("0")
+        break
+      case "mid-house":
+        setAge("40")
+        setEmployment("salaried")
+        setDependents("2")
+        break
+      case "family-college":
+        setAge("45")
+        setEmployment("business")
+        setDependents("3")
+        break
+      case "retirement":
+        setAge("55")
+        setEmployment("freelancer")
+        setDependents("1")
+        break
+      case "wedding":
+  setAge("28")
+  setEmployment("salaried")
+  setDependents("0")
+  break
+      default:
+        break
+    }
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -33,6 +70,7 @@ export default function ClientProfileForm({ onNext, formId, defaultValues }: Pro
       age: age ? Number(age) : null,
       employment,
       dependents: dependents ? Number(dependents) : null,
+      profilePreset,
     })
   }
 
@@ -107,6 +145,23 @@ export default function ClientProfileForm({ onNext, formId, defaultValues }: Pro
             onChange={(e) => setDependents(e.target.value)}
             className="w-full rounded-lg border px-3 py-2 text-sm"
           />
+        </div>
+
+        {/* Profile Presets */}
+        <div>
+          <label className="block text-sm font-medium mb-1">Profile Presets</label>
+          <select
+            value={profilePreset}
+            onChange={(e) => handlePresetChange(e.target.value)}
+            className="w-full rounded-lg border px-3 py-2 text-sm text-gray-500"
+          >
+            <option value="">Choose an option</option>
+            <option value="young-car">Young Professional Saving for a Car</option>
+            <option value="mid-house">Middle-aged Family Saving for a House</option>
+            <option value="family-college">Parents Saving for Children’s College</option>
+            <option value="retirement">Pre-Retirement Planning</option>
+            <option value="wedding">Couple Saving for Wedding</option>          
+            </select>
         </div>
       </div>
     </form>

@@ -24,18 +24,19 @@ export default function IncomeForm({
   const [employerType, setEmployerType] = useState(
     defaultValues?.employerType ?? ""
   )
+  const [expenses, setExpenses] = useState(defaultValues?.expenses ?? "")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    onNext({ income, otherIncome, paySchedule, employerType })
+    onNext({ income, otherIncome, paySchedule, employerType, expenses })
   }
 
   return (
     <form id={formId} onSubmit={handleSubmit} className="space-y-6">
       <header>
-        <h2 className="text-2xl font-semibold">Income information</h2>
+        <h2 className="text-2xl font-semibold">Income & Expenses</h2>
         <p className="text-gray-600">
-          Tell us about your salary and other income sources.
+          Tell us about your salary, other income sources, and monthly expenses.
         </p>
       </header>
 
@@ -62,6 +63,7 @@ export default function IncomeForm({
             value={otherIncome}
             onChange={(e) => setOtherIncome(e.target.value)}
             className="w-full rounded-lg border px-3 py-2"
+            placeholder="e.g. 5000"
           />
         </div>
 
@@ -100,6 +102,20 @@ export default function IncomeForm({
             <option value="student">Student</option>
             <option value="unemployed">Unemployed</option>
           </select>
+        </div>
+
+        {/* 👇 New Monthly Expenses field */}
+        <div className="sm:col-span-2">
+          <label className="block text-sm font-medium mb-1">
+            Monthly expenses
+          </label>
+          <input
+            type="number"
+            value={expenses}
+            onChange={(e) => setExpenses(e.target.value)}
+            className="w-full rounded-lg border px-3 py-2"
+            placeholder="e.g. 20000"
+          />
         </div>
       </div>
     </form>

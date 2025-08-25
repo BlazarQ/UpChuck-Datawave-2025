@@ -13,10 +13,11 @@ export default function IncomeForm({ onSave, defaultValues, formId }: Props) {
   const [otherIncome, setOtherIncome] = useState(defaultValues?.otherIncome ?? "")
   const [paySchedule, setPaySchedule] = useState(defaultValues?.paySchedule ?? "monthly")
   const [employerType, setEmployerType] = useState(defaultValues?.employerType ?? "private")
+  const [expenses, setExpenses] = useState(defaultValues?.expenses ?? "")
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    onSave({ income, otherIncome, paySchedule, employerType })
+    onSave({ income, otherIncome, paySchedule, employerType, expenses })
   }
 
   return (
@@ -28,9 +29,9 @@ export default function IncomeForm({ onSave, defaultValues, formId }: Props) {
       {/* Content */}
       <div className="flex-1 space-y-6 p-4 overflow-y-auto">
         <header>
-          <h3 className="text-xl font-semibold">Income Information</h3>
+          <h3 className="text-xl font-semibold">Income & Expenses</h3>
           <p className="text-gray-600 text-sm">
-            Tell us about your salary and other sources of income.
+            Tell us about your salary, other sources of income, and monthly expenses.
           </p>
         </header>
 
@@ -88,6 +89,20 @@ export default function IncomeForm({ onSave, defaultValues, formId }: Props) {
               <option value="student">Student</option>
               <option value="unemployed">Unemployed</option>
             </select>
+          </div>
+
+          {/* 👇 New Monthly Expenses field */}
+          <div className="sm:col-span-2">
+            <label className="block text-sm font-medium mb-1">
+              Monthly expenses
+            </label>
+            <input
+              type="number"
+              value={expenses}
+              onChange={(e) => setExpenses(e.target.value)}
+              className="w-full rounded-lg border px-3 py-2"
+              placeholder="e.g. 20,000"
+            />
           </div>
         </div>
       </div>

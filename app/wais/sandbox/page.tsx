@@ -81,12 +81,15 @@ export default function WAISSandbox() {
               months={financialData.months}
               viewMode={financialData.viewMode}
             />
-            <SummaryCards
-              income={financialData.income}
-              expenses={financialData.expenses}
-              savings={financialData.savings}
-              goal={financialData.goal}
-            />
+           <SummaryCards
+  income={financialData.income}
+  expenses={financialData.expenses}
+  savings={financialData.savings}
+  goal={financialData.goal}
+  months={financialData.months}
+  emergencyFundEnabled={financialData.financialPosition?.emergencyFundEnabled}
+/>
+
           </div>
 
           {/* Right side: Chatbot */}
