@@ -1,0 +1,152 @@
+{
+  "Savings Accounts": [
+    {
+      "Name": "Saver-Plus",
+      "InitialDeposit": "₱3,000.00",
+      "MinMonthlyADB": "₱3,000.00",
+      "DailyBalanceToEarnInterest": "₱50,000.00",
+      "InterestRatePerAnnum": "0.0625",
+      "Features": null
+    },
+    {
+      "Name": "#SaveUp",
+      "InitialDeposit": "₱1.00",
+      "MinMonthlyADB": "₱0.00",
+      "DailyBalanceToEarnInterest": "₱5,000.00",
+      "InterestRatePerAnnum": "0.0925",
+      "Features": null
+    },
+    {
+      "Name": "Maxi-saver",
+      "InitialDeposit": "₱2,000,000.00",
+      "MinMonthlyADB": "₱2,000,000.00",
+      "DailyBalanceToEarnInterest": "₱2,000,000.00",
+      "InterestRatePerAnnum": "0.125",
+      "Features": "Bonus 0.125% per annum if no withdrawal is made within the month"
+    },
+    {
+      "Name": "Regular Savings",
+      "InitialDeposit": "₱3,000.00",
+      "MinMonthlyADB": "₱3,000.00",
+      "DailyBalanceToEarnInterest": "₱5,000.00",
+      "InterestRatePerAnnum": "0.0625",
+      "Features": null
+    },
+    {
+      "Name": "Pamana Savings",
+      "InitialDeposit": "₱25,000.00",
+      "MinMonthlyADB": "₱25,000.00",
+      "DailyBalanceToEarnInterest": "₱25,000.00",
+      "InterestRatePerAnnum": "0.0625",
+      "Features": "Free life insurance worth 3x your average account balance"
+    },
+    {
+      "Name": "Pamana Savings (US Dollar)",
+      "InitialDeposit": "$1,000.00",
+      "MinMonthlyADB": "$1,000.00",
+      "DailyBalanceToEarnInterest": "$1,000.00",
+      "InterestRatePerAnnum": "0.05",
+      "Features": "Free life insurance worth 3x your average account balance"
+    },
+    {
+      "Name": "US Dollar",
+      "InitialDeposit": "$500.00",
+      "MinMonthlyADB": "$500.00",
+      "DailyBalanceToEarnInterest": "$500.00",
+      "InterestRatePerAnnum": "0.05",
+      "Features": null
+    },
+    {
+      "Name": "#MySaveUp",
+      "InitialDeposit": "₱1.00",
+      "MinMonthlyADB": "₱0.00",
+      "DailyBalanceToEarnInterest": "₱5,000.00",
+      "InterestRatePerAnnum": "0.0925",
+      "Features": "Max 30,000 limit"
+    },
+    {
+      "Name": "Pamana Padala",
+      "InitialDeposit": "₱500.00",
+      "MinMonthlyADB": "₱0.00",
+      "DailyBalanceToEarnInterest": "₱5,000.00",
+      "InterestRatePerAnnum": "0.0625",
+      "Features": "Daily balance to earn interest is USD 500 for US dollar accounts, plus free life insurance up to PHP 300,000 or USD 6,000, and free personal accident insurance worth PHP 100,000 for 90 days"
+    },
+    {
+      "Name": "Padala Moneyger",
+      "InitialDeposit": "₱0.00",
+      "MinMonthlyADB": "₱0.00",
+      "DailyBalanceToEarnInterest": "₱5,000.00",
+      "InterestRatePerAnnum": "0.0625",
+      "Features": null
+    }
+  ],
+  "Checking Accounts": [
+    {
+      "Name": "Regular Checking",
+      "InitialDeposit": "₱10,000.00",
+      "MinMonthlyADB": "₱10,000.00",
+      "DailyBalanceToEarnInterest": "₱0.00",
+      "InterestRatePerAnnum": "0",
+      "Features": null
+    },
+    {
+      "Name": "Maxi-one",
+      "InitialDeposit": "₱25,000.00",
+      "MinMonthlyADB": "₱25,000.00",
+      "DailyBalanceToEarnInterest": "₱25,000.00",
+      "InterestRatePerAnnum": "0.0625 or 0.0925",
+      "Features": "0.0625 for PHP25,000 to PHP999,999; 0.0925 for PHP1,000,000 and above"
+    },
+    {
+      "Name": "Maxi-one Passbook",
+      "InitialDeposit": "₱250,000.00",
+      "MinMonthlyADB": "₱500,000.00",
+      "DailyBalanceToEarnInterest": "₱25,000.00",
+      "InterestRatePerAnnum": "0.0625 or 0.0925",
+      "Features": "0.0625 for PHP25,000 to PHP999,999; 0.0925 for PHP1,000,000 and above"
+    },
+    {
+      "Name": "BizLink Checking",
+      "InitialDeposit": "₱10,000.00",
+      "MinMonthlyADB": "₱10,000.00",
+      "DailyBalanceToEarnInterest": "₱0.00",
+      "InterestRatePerAnnum": "0",
+      "Features": "BizLink Mobile App for optimized SME banking"
+    },
+    {
+      "Name": "Business Checking",
+      "InitialDeposit": "₱10,000.00",
+      "MinMonthlyADB": "₱10,000.00",
+      "DailyBalanceToEarnInterest": "₱0.00",
+      "InterestRatePerAnnum": "0",
+      "Features": "N/A"
+    }
+  ],
+  "Time Deposits": [
+    {
+      "Name": "Peso Auto Renew",
+      "InitialDeposit": "₱50,000.00",
+      "MinMonthlyADB": null,
+      "DailyBalanceToEarnInterest": "₱50,000.00",
+      "InterestRatePerAnnum": "varies",
+      "Features": "Time deposit placement is automatically renewed; higher returns hassle-free. Required Minimum Term: 35 Days"
+    },
+    {
+      "Name": "Plan Ahead Time Deposit",
+      "InitialDeposit": "₱50,000.00",
+      "MinMonthlyADB": null,
+      "DailyBalanceToEarnInterest": null,
+      "InterestRatePerAnnum": "visit BPI branches for more info",
+      "Features": "Fixed high interest rates. Required Minimum Term: 5 Years"
+    },
+    {
+      "Name": "BPI Foreign Currency Time Deposit (US Dollar)",
+      "InitialDeposit": "$1,000.00",
+      "MinMonthlyADB": null,
+      "DailyBalanceToEarnInterest": "$1,000.00",
+      "InterestRatePerAnnum": "varies",
+      "Features": "Required Minimum Term: 35 Days"
+    }
+  ]
+}

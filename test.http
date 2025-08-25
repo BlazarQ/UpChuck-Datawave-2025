@@ -1,0 +1,24 @@
+
+
+//TO CALL THIS API FROM YOUR frontend
+async function getFinancialAdvice(userData) {
+  try {
+    const response = await fetch('http://localhost:3000/api/analyze', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData)
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to get financial advice');
+    }
+
+    const aiInsights = await response.json();
+    return aiInsights; // Returns just the AI insights and recommendations
+  } catch (error) {
+    console.error('Failed to get financial advice:', error);
+    throw error;
+  }
+}
