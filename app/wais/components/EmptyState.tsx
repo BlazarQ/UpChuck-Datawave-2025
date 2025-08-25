@@ -1,5 +1,6 @@
 "use client"
 
+
 export default function EmptyState({ data }: { data: Record<string, any> }) {
   return (
     <div className="space-y-8">
@@ -46,9 +47,9 @@ export default function EmptyState({ data }: { data: Record<string, any> }) {
         <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
           <h3 className="font-semibold text-red-600 mb-3 text-lg">Your Goals</h3>
           <ul className="text-sm text-gray-700 space-y-1">
-            <li><strong>Primary Goal:</strong> {data.goal ?? "—"}</li>
-            <li><strong>Timeline:</strong> {data.timeline ?? "—"}</li>
-            <li><strong>Risk Tolerance:</strong> {data.riskTolerance ?? "—"}</li>
+            <li><strong>Primary Goal:</strong> {data.goal ?? "Education Fund"}</li>
+            <li><strong>Timeline:</strong> {data.timeline ?? "3 years"}</li>
+            <li><strong>Risk Tolerance:</strong> {data.riskTolerance ?? "Conservative "}</li>
           </ul>
         </div>
       </div>

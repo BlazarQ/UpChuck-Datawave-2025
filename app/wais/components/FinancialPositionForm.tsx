@@ -84,6 +84,14 @@ export default function FinancialPositionForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    const assets = Number(cash) + (hasInvestments ? 1 : 0) // you can replace 1 with actual investment value later
+    const liabilities = loans.reduce(
+      (sum, loan) => sum + Number(loan.amount || 0),
+      0
+    )
+    const savings = hasEmergencyFunds ? Number(emergencyAmount) : 0
+
     onNext({
       cash,
       hasInvestments,
